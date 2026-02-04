@@ -7,7 +7,7 @@ include('header.php');
 <div class="container" style="min-height: 83vh;">
     <div class="row justify-content-center mt-4">
         <div class="col-md-6 mt-5">
-            <form action="nxenesi-shto.php" class="shadow-lg p-3 rounded-3" method="post">
+            <form action="nxenesi-shto.php" enctype="multipart/form-data" class="shadow-lg p-3 rounded-3" method="post">
                 <h2 class="mb-4">➕ Shto Nxenes</h2>
 
                 <!-- Emri -->
