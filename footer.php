@@ -16,11 +16,6 @@
                     <h2>Text</h2>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="border-color-white border-1 p-3">
-                    <h2>Text</h2>
-                </div>
-            </div>
         </div>
     </div>
 </footer>
