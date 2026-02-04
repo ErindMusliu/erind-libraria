@@ -1,5 +1,7 @@
 <?php
 
+include('classes/Nxenesi.php');
+
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $error = [];
 
@@ -51,6 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     }
 
     else{
-        
+        $nxenesi = new Nxenesi();
+        $nxenesi->saveNxenesi($emri,$mbiemri,$klasa);
     }
 }
