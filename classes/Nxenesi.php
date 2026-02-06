@@ -14,4 +14,16 @@ class Nxenesi extends Database{
 
         return $this->conn->query($sql);
     }
+
+    public function find($id){
+        $sql = "select * from nxenesit where id='$id'";
+
+        return $this->conn->query($sql);
+    }
+
+    public function update($id,$emri,$mbiemri,$foto){
+        $sql = "update nxenesit set emri='$emri',mbiemri='$mbiemri',foto='$foto' where id='$id'";
+
+        return $this->conn->query($sql);
+    }
 }
