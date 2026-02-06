@@ -18,14 +18,18 @@ include('header.php');
             echo "<div class='card-body align-items-center'>";
             echo "<h3 class='card-title'>".$n['emri']." ".$n['mbiemri']."</h3>";
             echo "<h4 class='card-title text-center'>".$n['klasa']."</h4>";
+            echo "<div class='m-auto text-center mt-3'>";
             echo "<a href='' class='card-link text-warning text-decoration-none'>Edit</a>";
             echo "<a href='' class='card-link text-danger text-decoration-none'>Delete</a>";
+            echo "</div>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
         }
         ?>
     </div>
+</div>
+
 </div>
 
 <?php 
