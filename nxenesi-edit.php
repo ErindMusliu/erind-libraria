@@ -8,38 +8,30 @@ $id = $_GET['id'];
 $nxenesi = new Nxenesi();
 $result = $nxenesi->find($id);
 
-if($result){
-    $nxenesit = $result->fetch_assoc();
-}
-
-else{
-    echo "Error";
-}
-
 ?>
 
 <div class="container" style="min-height: 83vh;">
     <div class="row justify-content-center mt-4">
         <div class="col-md-6 mt-5">
             <form action="edit-nxenesi.php" enctype="multipart/form-data" class="shadow-lg p-3 rounded-3" method="post">
-                <h2 class="mb-4">✒ Nxenesin <?php echo $nxenesit['emri']." ".$nxenesit['mbiemri'] ?></h2>
+                <h2 class="mb-4">✒ Nxenesin <?php echo $result['emri']." ".$result['mbiemri'] ?></h2>
                 <input type="hidden" name="id" value="<?php echo $_GET['id'] ?>">
                 <!-- Emri -->
 
                 <div class="mb-3">
-                    <input type="text" name="emri" class="form-control" placeholder="Sheno Emrin" value="<?php echo $nxenesit['emri'] ?>">
+                    <input type="text" name="emri" class="form-control" placeholder="Sheno Emrin" value="<?php echo $result['emri'] ?>">
                 </div>
 
                 <!-- Mbiemri -->
 
                 <div class="mb-3">
-                    <input type="text" name="mbiemri" class="form-control" placeholder="Sheno Mbiemrin" value="<?php echo $nxenesit['mbiemri'] ?>">
+                    <input type="text" name="mbiemri" class="form-control" placeholder="Sheno Mbiemrin" value="<?php echo $result['mbiemri'] ?>">
                 </div>
 
                 <!-- Klasa -->
 
                 <div class="mb-3">
-                    <input type="text" name="klasa" class="form-control" placeholder="Sheno Klasen" value="<?php echo $nxenesit['klasa'] ?>">
+                    <input type="text" name="klasa" class="form-control" placeholder="Sheno Klasen" value="<?php echo $result['klasa'] ?>">
                 </div>
 
                 <!-- Foto -->
