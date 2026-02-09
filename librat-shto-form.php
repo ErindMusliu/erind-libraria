@@ -25,7 +25,7 @@ include('header.php');
                 <!-- Sasia -->
 
                 <div class="mb-3">
-                    <input type="text" name="sasia" class="form-control" placeholder="Sheno Sasine">
+                    <input type="number" name="sasia" class="form-control" placeholder="Sheno Sasine">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Save</button>
