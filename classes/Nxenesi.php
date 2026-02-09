@@ -18,7 +18,8 @@ class Nxenesi extends Database{
     public function find($id){
         $sql = "select * from nxenesit where id='$id'";
 
-        return $this->conn->query($sql);
+        $result = $this->conn->query($sql);
+        return $result->fetch_assoc();
     }
 
     public function update($id,$emri,$mbiemri,$klasa,$foto){
@@ -28,7 +29,9 @@ class Nxenesi extends Database{
     }
 
     public function delete($id){
-        $sql = "delete from nxenesit where id='$id'";
+        $user = $this->find($id);
+        unlink('image/'.$user['foto']);
+        $sql = "delete from nxenesit where id='$id' limit 1";
 
         return $this->conn->query($sql);
     }
