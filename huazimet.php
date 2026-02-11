@@ -41,7 +41,7 @@ include('header.php');
             echo "<td>".$h['data_marrjes']."</td>";
             echo "<td>".$h['afati_kthimit']."</td>";
             echo "<td>".$h['data_kthimit']."</td>";
-            echo "<td><a href='librat-fshi.php?id=$id' class='btn btn-danger'>Delete</a></td>";
+            echo "<td><a href='huazimet-fshi.php?id=$id' class='btn btn-danger'>Delete</a></td>";
             echo "</tr>";
         }
         ?>
