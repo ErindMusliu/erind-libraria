@@ -32,4 +32,10 @@ class Libri extends Database{
 
         return $this->conn->query($sql);
     }
+
+    public function autoret(){
+        $sql = "select COUNT(autori) from librat";
+
+        return $this->conn->query($sql);
+    }
 }
