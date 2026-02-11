@@ -14,4 +14,10 @@ class Huazimi extends Database{
 
         return $this->conn->query($sql);
     }
+
+    public function delete($id){
+        $sql = "delete from huazimet where id='$id'";
+
+        return $this->conn->query($sql);
+    }
 }
