@@ -8,4 +8,10 @@ class Huazimi extends Database{
 
         return $this->conn->query($sql);
     }
+
+    public function index($id){
+        $sql = "select n.id,n.emri,n.mbiemri,n.klasa,l.titulli,l.autori,l.sasia_totale,h.data_marrjes,h.afati_kthimit,h.data_kthimit from huazimet h join librat l on h.libri_id=l.id join nxenesit n on h.nxenesi_id=n.id where n.id='$id'";
+
+        return $this->conn->query($sql);
+    }
 }
