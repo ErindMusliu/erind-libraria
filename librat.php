@@ -25,13 +25,14 @@ include('header.php');
 
         foreach($librat as $l){
             $id = $l['id'];
+            $autori = $l['autori'];
             echo "<tr>";
             echo "<td>".$l['id']."</td>";
             echo "<td>".$l['titulli']."</td>";
             echo "<td>".$l['autori']."</td>";
             echo "<td>".$l['sasia_totale']."</td>";
             echo "<td>".$l['created_at']."</td>";
-            echo "<td><a href='librat-fshi.php?id=$id' class='btn btn-danger'>Delete</a> <a href='librat-edit.php?id=$id' class='btn btn-info'>Edit</a> <a href='huazimet-form.php?id=$id' class='btn btn-light'>Huazo</a></td>";
+            echo "<td><a href='librat-fshi.php?id=$id' class='btn btn-danger'>Delete</a> <a href='librat-edit.php?id=$id' class='btn btn-info'>Edit</a> <a href='huazimet-form.php?id=$id' class='btn btn-light'>Huazo</a> <a href='autoret.php?autori=$autori' class='btn btn-success'>Info per Autorin</a></td>";
             echo "</tr>";
         }
         ?>

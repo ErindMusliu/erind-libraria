@@ -33,8 +33,8 @@ class Libri extends Database{
         return $this->conn->query($sql);
     }
 
-    public function autoret(){
-        $sql = "select COUNT(autori) from librat";
+    public function autoret($autori){
+        $sql = "select autori,SUM(sasia_totale) as total from librat where autori='$autori'";
 
         return $this->conn->query($sql);
     }
