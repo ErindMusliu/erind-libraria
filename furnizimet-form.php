@@ -31,7 +31,7 @@ include('header.php');
                 <!-- Zbritje -->
 
                 <div class="mb-3">
-                    <input type="number" name="zbritje" class="form-control" placeholder="Zbritje">
+                    <input type="number" name="zbritje" class="form-control" placeholder="Zbritje" value="0.0">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Save</button>
