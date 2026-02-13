@@ -14,4 +14,13 @@ class Furnizimi extends Database{
         
         return $this->conn->query($sql);
     }
+
+    public function dataArritjes($id){
+        $data_arritjes = new DateTime();
+        $dorezuar = $data_arritjes->format('Y-m-d');
+
+        $sql = "update furnizimi set data_arritjes='$dorezuar' where id='$id'";
+        
+        return $this->conn->query($sql);
+    }
 }
