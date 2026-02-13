@@ -23,10 +23,4 @@ class Furnizimi extends Database{
         
         return $this->conn->query($sql);
     }
-
-    public function totali(){
-        $sql = "select cmimi_sasi-zbritje from furnizimi";
-
-        return $this->conn->query($sql);
-    }
 }

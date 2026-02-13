@@ -18,6 +18,7 @@ include('header.php');
                     <th>Data e Porosise</th>
                     <th>Data e Arritjes</th>
                     <th>Zbritje</th>
+                    <th>Totali</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -26,9 +27,10 @@ include('header.php');
         include('classes/Furnizimi.php');
         $furnizimi = new Furnizimi();
         $furnizimet = $furnizimi->index();
-
+        
         foreach($furnizimet as $f){
             $id = $f['id'];
+            $total = ($f['cmimi_sasi'] * $f['zbritje']) - $f['zbritje'];
             echo "<tr>";
             echo "<td>".$f['id']."</td>";
             echo "<td>".$f['libri']."</td>";
@@ -37,6 +39,7 @@ include('header.php');
             echo "<td>".$f['data_porosise']."</td>";
             echo "<td>".$f['data_arritjes']."</td>";
             echo "<td>".$f['zbritje']."</td>";
+            echo "<td>$total$</td>";
             echo "<td><a href='dorezuar.php?id=$id' class='btn btn-success'>Dorezuar</a></td>";
             echo "</tr>";
         }
