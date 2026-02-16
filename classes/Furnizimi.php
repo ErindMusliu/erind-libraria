@@ -4,7 +4,7 @@ require_once('classes/Database.php');
 
 class Furnizimi extends Database{
     public function index(){
-        $sql = "select * from furnizimi";
+        $sql = "select f.id,f.libri_id,f.sasia_furnizimit,f.cmimi_sasi,f.data_porosise,f.data_arritjes,f.zbritje,f.created_at from furnizimet f join librat l on f.libri_id=l.id";
 
         return $this->conn->query($sql);
     }

@@ -13,7 +13,17 @@ include('header.php');
                 <!-- Libri -->
 
                 <div class="mb-3">
-                    <input type="text" name="libri" class="form-control" placeholder="Sheno Librin">
+                    <label for="libri">Libri:</label>
+                    <select name="libri" id="libri" class="form-select">
+                        <?php 
+                        include('classes/Libri.php');
+                        $libri = new Libri();
+                        $librat = $libri->index();
+                        ?>
+                        <?php foreach($librat as $l){ ?>
+                        <option value="<?php echo $l['id'] ?>"><?php echo $l['titulli'] ?></option>
+                        <?php } ?>
+                    </select>
                 </div>
 
                 <!-- Sasia Furnizimit -->
