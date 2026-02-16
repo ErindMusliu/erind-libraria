@@ -33,7 +33,7 @@ include('header.php');
             $total = ($f['cmimi_sasi'] * $f['zbritje']) - $f['zbritje'];
             echo "<tr>";
             echo "<td>".$f['id']."</td>";
-            echo "<td>".$f['libri']."</td>";
+            echo "<td>".$f['titulli']."</td>";
             echo "<td>".$f['sasia_furnizimit']."</td>";
             echo "<td>".$f['cmimi_sasi']."</td>";
             echo "<td>".$f['data_porosise']."</td>";
