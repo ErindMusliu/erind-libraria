@@ -15,6 +15,12 @@ class Libri extends Database{
         return $this->conn->query($sql);
     }
 
+    public function libratFurnizim(){
+        $sql = "select MIN(id) as id,titulli,autori from librat group by titulli,autori";
+        
+        return $this->conn->query($sql);
+    }
+
     public function find($id){
         $sql = "select * from librat where id='$id'";
 

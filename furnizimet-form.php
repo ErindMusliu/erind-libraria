@@ -18,10 +18,10 @@ include('header.php');
                         <?php 
                         include('classes/Libri.php');
                         $libri = new Libri();
-                        $librat = $libri->index();
+                        $librat = $libri->libratFurnizim();
                         ?>
                         <?php foreach($librat as $l){ ?>
-                        <option value="<?php echo $l['id'] ?>"><?php echo $l['titulli'] ?></option>
+                        <option value="<?php echo $l['id'] ?>"><?php echo $l['titulli']."(".$l['autori'].")" ?></option>
                         <?php } ?>
                     </select>
                 </div>
