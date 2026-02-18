@@ -44,4 +44,10 @@ class Libri extends Database{
 
         return $this->conn->query($sql);
     }
+
+    public function search($search){
+        $sql = "select * from librat like where titulli like $search";
+
+        return $this->conn->query($sql);
+    }
 }
