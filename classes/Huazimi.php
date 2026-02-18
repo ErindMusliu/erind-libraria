@@ -20,4 +20,13 @@ class Huazimi extends Database{
 
         return $this->conn->query($sql);
     }
+
+    public function dataKthimit($id){
+        $data_arritjes = new DateTime();
+        $dorezuar = $data_arritjes->format('Y-m-d');
+
+        $sql = "update huazimet set data_kthimit='$dorezuar' where id='$id'";
+        
+        return $this->conn->query($sql);
+    }
 }
