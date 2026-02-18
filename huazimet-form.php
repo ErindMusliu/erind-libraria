@@ -38,13 +38,6 @@ $nxenesit = $nxenesi->index();
                     <input type="date" class="form-control" name="afati-i-kthimit">
                 </div>
 
-                <!-- Data e Kthimit -->
-
-                <div class="mb-3">
-                    <label for="data-e-kthimit" class="form-label">Data e Kthimit:</label>
-                    <input type="date" class="form-control" name="data-e-kthimit">
-                </div>
-
                 <button type="submit" class="btn btn-primary">Save</button>
             </form>
         </div>

@@ -20,15 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     else{
         $error[] = "Zgjedh afatin e kthtimit";
     }
-
-    if(isset($_POST['data-e-kthimit']) && !empty($_POST['data-e-kthimit'])){
-        $data_e_kthimit = htmlspecialchars(strip_tags(trim($_POST['data-e-kthimit'])));
-    }
-
-    else{
-        $error[] = "Zgjedh daten e kthtimit";
-    }
-
+    
     if(count($error) > 0){
         foreach($error as $e){
             echo $e."<br>";
