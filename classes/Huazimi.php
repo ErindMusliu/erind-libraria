@@ -3,8 +3,8 @@
 include('classes/Database.php');
 
 class Huazimi extends Database{
-    public function saveHuazimet($nxenesi_id,$libri_id,$afati_kthimit,$data_kthimit){
-        $sql = "insert into huazimet(nxenesi_id,libri_id,afati_kthimit,data_kthimit) value('$nxenesi_id','$libri_id','$afati_kthimit','$data_kthimit')";
+    public function saveHuazimet($nxenesi_id,$libri_id,$afati_kthimit){
+        $sql = "insert into huazimet(nxenesi_id,libri_id,afati_kthimit) value('$nxenesi_id','$libri_id','$afati_kthimit')";
 
         return $this->conn->query($sql);
     }

@@ -20,7 +20,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     else{
         $error[] = "Zgjedh afatin e kthtimit";
     }
-    
+
     if(count($error) > 0){
         foreach($error as $e){
             echo $e."<br>";
@@ -30,7 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     else{
         $libri_id = $_POST['id'];
         $huazimi = new Huazimi();
-        $huazimi->saveHuazimet($nxenesi_id,$libri_id,$afati_i_kthimit,$data_e_kthimit);
+        $huazimi->saveHuazimet($nxenesi_id,$libri_id,$afati_i_kthimit);
         header("Location:librat.php");
     }
 }

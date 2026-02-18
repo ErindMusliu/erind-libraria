@@ -20,7 +20,6 @@ include('header.php');
                     <th>Data e Marrjes</th>
                     <th>Afati i Kthimit</th>
                     <th>Data e Kthimit</th>
-                    <th>Aktive</th>
                     <th>Vonesa</th>
                     <th>Actions</th>
                 </tr>
@@ -43,35 +42,22 @@ include('header.php');
             echo "<td>".$h['data_marrjes']."</td>";
             echo "<td>".$h['afati_kthimit']."</td>";
             echo "<td>".$h['data_kthimit']."</td>";
-            if($h['afati_kthimit']>=$h['data_kthimit']){
-                echo "<td>Aktive</td>";
-            }
-
-            elseif($h['afati_kthimit']==$h['data_kthimit']){
-                echo "<td>Jo Aktive</td>";
-            }
-
-            else{
-                echo "<td>Vonese</td>";
-            }
-            
             if($h['afati_kthimit']<=$h['data_kthimit']){
                 echo "<td>Me Vonese</td>";
             }
 
-            elseif($h['data_kthimit'] == null){
+            elseif($h['data_kthimit'] == Null){
                 echo "<td>Ne Lexim</td>";
             }
 
             else{
-                echo "<td>Code</td>";
+                echo "<td>Me kohe</td>";
             }
 
+            
             echo "<td><a href='huazimet-fshi.php?id=$id' class='btn btn-danger'>Delete</a> <a href='huazimet-kthyer.php?id=$id' class='btn btn-success'>Kthyer</a></td>";
             echo "</tr>";
         }
-
-        echo $id;
         ?>
         </tbody>
         </table>
