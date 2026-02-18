@@ -20,6 +20,7 @@ include('header.php');
                     <th>Data e Marrjes</th>
                     <th>Afati i Kthimit</th>
                     <th>Data e Kthimit</th>
+                    <th>Aktive</th>
                     <th>Actions</th>
                 </tr>
             </thead>
