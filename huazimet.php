@@ -43,11 +43,11 @@ include('header.php');
             echo "<td>".$h['data_marrjes']."</td>";
             echo "<td>".$h['afati_kthimit']."</td>";
             echo "<td>".$h['data_kthimit']."</td>";
-            if($h['afati_kthimit']<=$h['data_kthimit']){
-                echo "<td>Jo Aktive</td>";
+            if($h['afati_kthimit']>=$h['data_kthimit']){
+                echo "<td>Aktive</td>";
             }
 
-            elseif($h['afati_kthimit']){
+            elseif($h['afati_kthimit']==$h['data_kthimit']){
                 echo "<td>Jo Aktive</td>";
             }
 
@@ -55,8 +55,8 @@ include('header.php');
                 echo "<td>Vonese</td>";
             }
             
-            if($h['afati_kthimit']==$h['data_kthimit']){
-                echo "<td>Me Kohe</td>";
+            if($h['afati_kthimit']<=$h['data_kthimit']){
+                echo "<td>Me Vonese</td>";
             }
 
             elseif($h['data_kthimit'] == null){
@@ -64,12 +64,14 @@ include('header.php');
             }
 
             else{
-                echo "<td>Me Vonese</td>";
+                echo "<td>Code</td>";
             }
 
             echo "<td><a href='huazimet-fshi.php?id=$id' class='btn btn-danger'>Delete</a> <a href='huazimet-kthyer.php?id=$id' class='btn btn-success'>Kthyer</a></td>";
             echo "</tr>";
         }
+
+        echo $id;
         ?>
         </tbody>
         </table>
